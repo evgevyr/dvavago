@@ -56,8 +56,7 @@
                               name="country.id"
                               optionValue="name"
                               optionKey="id"
-                              from="${Country.getAll()}"
-                              required="true"/>
+                              from="${Country.getAll()}"/>
                     <g:hasErrors>
                         <ul>
                             <g:eachError var="err" field="country">
@@ -89,7 +88,9 @@
 
                 <div class="form-group">
                     <label class="text-white" for="linkInput">Ссылка</label>
-                    <f:input property="link" id="linkInput" class="form-control"/>
+                    <f:input property="link"
+                             id="linkInput"
+                             class="form-control"/>
                     <g:hasErrors>
                         <ul>
                             <g:eachError var="err" field="link">

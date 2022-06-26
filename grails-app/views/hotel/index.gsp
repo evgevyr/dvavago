@@ -29,15 +29,21 @@
             <g:sortableColumn property="name" title="Название"/>
             <g:sortableColumn property="country.name" title="Страна"/>
             <g:sortableColumn property="stars" title="Звезды"/>
-            <g:sortableColumn property="stars" title="Звезды"/>
             <th>Действия</th>
         </tr>
         </thead>
         <tbody class="bg-white">
         <g:each in="${hotelList}" var="hotel">
             <tr>
-                <td>${hotel.name}</td>
+                <td>
+                    ${hotel.name}
+                    <g:if test="${hotel.link != null}">
+                        <br>
+                        <g:link url="${hotel.link}" target="_blank">Перейти на сайт</g:link>
+                    </g:if>
+                </td>
                 <td>${hotel.country.name}</td>
+                <td>${hotel.stars}</td>
                 <td class="d-inline-flex">
                     <g:form resource="${hotel}" action="edit" class="mr-1">
                         <button type="submit" class="btn btn-outline-dark">
