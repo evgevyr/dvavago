@@ -1,0 +1,13 @@
+.dimmed-window {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1em;
+}
+
+.table tbody tr td {
+    font-size: medium;
+}
+
+.table thead tr th {
+    font-size: medium;
+    font-weight: bold;
+}
