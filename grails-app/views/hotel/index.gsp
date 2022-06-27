@@ -53,13 +53,11 @@
                 <td class="d-inline-flex">
                     <g:form resource="${hotel}" action="edit" class="mr-1">
                         <button type="submit" class="btn btn-outline-dark">
-                            <%--TODO: Add icon--%>
                             Редактировать
                         </button>
                     </g:form>
                     <g:form resource="${hotel}" method="DELETE">
                         <button type="submit" class="btn btn-outline-dark">
-                            <%--TODO: Add icon--%>
                             Удалить
                         </button>
                     </g:form>
