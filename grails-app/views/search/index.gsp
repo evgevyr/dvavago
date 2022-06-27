@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Home Page</title>
+    <title>Поиск</title>
 </head>
 
 <body>
@@ -13,12 +13,12 @@
     <ul class="nav nav-pills">
         <li class="nav-item">
             <a href="${createLink(uri: '/hotel/index')}" class="btn btn-outline-light text-light">
-                Список отелей
+                Справочник отелей
             </a>
         </li>
         <li class="nav-item">
             <a href="${createLink(uri: '/country/index')}" class="btn btn-outline-light text-light">
-                Список стран
+                Справочник стран
             </a>
         </li>
     </ul>

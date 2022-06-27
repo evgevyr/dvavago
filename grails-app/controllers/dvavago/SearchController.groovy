@@ -16,7 +16,7 @@ class SearchController {
         Iterator i = resultList.iterator()
 
         while (i.hasNext()) {
-            if (i.next().name.indexOf(hotelName) == -1)
+            if (i.next().name.toLowerCase().indexOf(hotelName.toLowerCase()) == -1)
                 i.remove()
         }
 
@@ -28,6 +28,5 @@ class SearchController {
         })
 
         respond resultList, view: "/search/result"
-        //render template: "/search/result"
     }
 }

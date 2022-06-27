@@ -15,13 +15,13 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="${createLink(uri: '/countries')}" class="btn btn-outline-light text-light">
-                Список стран
+            <a href="${createLink(uri: '/country/index')}" class="btn btn-outline-light text-light">
+                Справочник стран
             </a>
         </li>
         <li class="nav-item">
-            <a href="${createLink(uri: '/hotels')}" class="btn btn-outline-light text-light">
-                Список отелей
+            <a href="${createLink(uri: '/hotel/index')}" class="btn btn-outline-light text-light">
+                Справочник отелей
             </a>
         </li>
     </ul>
@@ -33,30 +33,29 @@
     </g:if>
     <g:else>
         <p class="h3 text-white">Найдено отелей: ${hotelList.size()}</p>
-    </g:else>
-    <table class="table table-hover table-striped">
-        <thead>
-        <tr class="bg-white">
-            <th>Название</th>
-            <th>Звездность</th>
-        </tr>
-        </thead>
-        <tbody class="bg-white">
-        <g:each in="${hotelList}" var="hotel">
-            <tr>
-                <td>
-                    ${hotel.name}
-                    <g:if test="${hotel.link != null}">
-                        <br>
-                        <g:link url="${hotel.link}" target="_blank">Перейти на сайт</g:link>
-                    </g:if>
-                </td>
-                <td>${hotel.stars}</td>
+        <table class="table table-hover table-striped">
+            <thead>
+            <tr class="bg-white">
+                <th>Название</th>
+                <th>Звездность</th>
             </tr>
-        </g:each>
-        </tbody>
-        <tfoot
-    </table>
+            </thead>
+            <tbody class="bg-white">
+            <g:each in="${hotelList}" var="hotel">
+                <tr>
+                    <td>
+                        ${hotel.name}
+                        <g:if test="${hotel.link != null}">
+                            <br>
+                            <g:link url="${hotel.link}" target="_blank">Перейти на сайт</g:link>
+                        </g:if>
+                    </td>
+                    <td>${hotel.stars}</td>
+                </tr>
+            </g:each>
+            </tbody>
+        </table>
+    </g:else>
 </div>
 </body>
 </html>

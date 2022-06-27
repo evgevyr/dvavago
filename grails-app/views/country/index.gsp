@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Список стран</title>
+    <title>Справочник стран</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         </li>
         <li class="nav-item">
             <a href="${createLink(uri: '/hotel/index')}" class="btn btn-outline-light text-light">
-                Список отелей
+                Справочник отелей
             </a>
         </li>
         <li class="nav-item">
@@ -27,7 +27,7 @@
 </div>
 
 <div class="row mt-5">
-    <p class="h3 text-white">Список стран</p>
+    <p class="h3 text-white">Справочник стран</p>
     <table class="table table-hover table-striped">
         <thead>
         <tr class="bg-white">

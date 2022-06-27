@@ -21,4 +21,11 @@ class Hotel {
         name length: 255
         stars length: 1
     }
+
+    Hotel(String name, Long countryID, Integer stars, String link) {
+        this.name = name
+        this.stars = stars
+        this.link = link
+        this.country = Country.findWhere(id: countryID)
+    }
 }

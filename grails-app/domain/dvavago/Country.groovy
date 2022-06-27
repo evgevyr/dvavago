@@ -14,4 +14,9 @@ class Country {
         name length: 255
         capital length: 128
     }
+
+    Country(String name, String capital) {
+        this.name = name
+        this.capital = capital
+    }
 }
