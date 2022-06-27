@@ -10,6 +10,7 @@
 <body>
 <div class="row h-25"></div>
 
+<%--
 <div class="row justify-content-center align-items-center mb-3">
     <ul class="nav nav-pills">
         <li class="nav-item">
@@ -24,6 +25,7 @@
         </li>
     </ul>
 </div>
+--%>
 
 <div class="row justify-content-center align-items-center">
     <div class="dimmed-window col-3">
@@ -52,12 +54,13 @@
 
                 <div class="form-group">
                     <label class="text-white" for="countryInput">Страна</label>
+                    <g:set var="countryIndex" value="${Country.getAll().indexOf(this.hotel.country)}"/>
                     <g:select class="form-control"
                               id="countryInput"
                               name="country.id"
                               optionValue="name"
                               optionKey="id"
-                              from="${Country.getAll()}"
+                              from="${Country.getAll().swap(0, countryIndex > -1 ? countryIndex : 0)}"
                               required="true"/>
                     <g:hasErrors>
                         <ul>
@@ -106,7 +109,7 @@
 
                 <div class="row align-items-center justify-content-center">
                     <button type="submit" class="btn btn-outline-light mb-3">
-                        Редактировать
+                        Сохранить
                     </button>
                 </div>
             </f:with>

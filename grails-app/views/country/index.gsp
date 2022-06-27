@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" import="dvavago.Country" %>
 <html>
 <head>
     <meta name="layout" content="main"/>
@@ -14,8 +14,13 @@
             </a>
         </li>
         <li class="nav-item">
-            <g:link class="btn btn-outline-light text-light" action="create">
-                Создать
+            <a href="${createLink(uri: '/hotel/index')}" class="btn btn-outline-light text-light">
+                Список отелей
+            </a>
+        </li>
+        <li class="nav-item">
+            <g:link class="btn btn-outline-light text-light" action="create" controller="country">
+                Создать страну
             </g:link>
         </li>
     </ul>
@@ -32,7 +37,7 @@
         </tr>
         </thead>
         <tbody class="bg-white">
-        <g:each in="${countryList}" var="country">
+        <g:each in="${Country.getAll()}" var="country">
             <tr>
                 <td>${country.name}</td>
                 <td>${country.capital}</td>

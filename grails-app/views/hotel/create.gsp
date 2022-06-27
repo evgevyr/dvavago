@@ -9,6 +9,7 @@
 <body>
 <div class="row h-25"></div>
 
+<%--
 <div class="row justify-content-center align-items-center mb-3">
     <ul class="nav nav-pills">
         <li class="nav-item">
@@ -17,12 +18,13 @@
             </a>
         </li>
         <li class="nav-item">
-            <g:link class="btn btn-outline-light text-light" action="index">
+            <a href="${createLink(uri: '/hotels')}" class="btn btn-outline-light text-light">
                 Список отелей
-            </g:link>
+            </a>
         </li>
     </ul>
 </div>
+--%>
 
 <div class="row justify-content-center align-items-center">
     <div class="dimmed-window col-3">

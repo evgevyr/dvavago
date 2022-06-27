@@ -8,7 +8,7 @@ class Hotel {
 
     static constraints = {
         name blank: false, nullable: false, size: 1..255, validator: {val, obj ->
-            if (findWhere(name: val, country: obj.country) != null && findWhere(id: obj.id) == null)
+            if (findWhere(name: val, country: obj.country) != null && findWhere(name: val, country: obj.country).id != obj.id)
                 return "default.hotel.not.unique.message"
         }
         country nullable: false

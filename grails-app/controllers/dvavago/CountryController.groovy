@@ -65,6 +65,7 @@ class CountryController {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'country.label', default: 'Country'), country.id])
                 redirect action: "index", method: "GET"
+                //redirect action: "index", method: "GET"
             }
             '*'{ respond country, [status: OK] }
         }
@@ -81,7 +82,7 @@ class CountryController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'country.label', default: 'Country'), id])
-                redirect action:"index", method:"GET"
+                redirect action: "index", method: "GET"
             }
             '*'{ render status: NO_CONTENT }
         }

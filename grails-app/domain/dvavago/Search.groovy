@@ -2,11 +2,11 @@ package dvavago
 
 class Search {
 
-    String query
+    String hotelName
     Country country
 
     static constraints = {
-        query blank: false, nullable: false, size: 1..255
+        hotelName blank: false, nullable: false, size: 1..255
         country nullable: false
     }
 }

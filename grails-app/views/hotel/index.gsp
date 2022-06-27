@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" import="dvavago.Hotel" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,8 +15,13 @@
             </a>
         </li>
         <li class="nav-item">
-            <g:link class="btn btn-outline-light text-light" action="create">
-                Создать
+            <a href="${createLink(uri: '/country/index')}" class="btn btn-outline-light text-light">
+                Список стран
+            </a>
+        </li>
+        <li class="nav-item">
+            <g:link class="btn btn-outline-light text-light" action="create" controller="hotel">
+                Создать отель
             </g:link>
         </li>
     </ul>
@@ -26,14 +32,14 @@
     <table class="table table-hover table-striped">
         <thead>
         <tr class="bg-white">
-            <g:sortableColumn property="name" title="Название"/>
+            <g:sortableColumn property="name" title="Название" action=""/>
             <g:sortableColumn property="country.name" title="Страна"/>
             <g:sortableColumn property="stars" title="Звезды"/>
             <th>Действия</th>
         </tr>
         </thead>
         <tbody class="bg-white">
-        <g:each in="${hotelList}" var="hotel">
+        <g:each in="${Hotel.getAll()}" var="hotel">
             <tr>
                 <td>
                     ${hotel.name}
