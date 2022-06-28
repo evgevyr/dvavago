@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="text-white" for="linkInput">Ссылка</label>
+                    <label class="text-white" for="linkInput">Сайт</label>
                     <f:input property="link" id="linkInput" class="form-control"/>
                     <g:hasErrors>
                         <ul>

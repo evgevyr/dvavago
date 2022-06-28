@@ -22,6 +22,8 @@ class Hotel {
         stars length: 1
     }
 
+    static belongsTo = Country
+
     Hotel(String name, Long countryID, Integer stars, String link) {
         this.name = name
         this.stars = stars

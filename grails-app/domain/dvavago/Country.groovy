@@ -15,6 +15,8 @@ class Country {
         capital length: 128
     }
 
+    static hasMany = [hotel: Hotel]
+
     Country(String name, String capital) {
         this.name = name
         this.capital = capital
