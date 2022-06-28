@@ -86,7 +86,11 @@
 
                 <div class="form-group">
                     <label class="text-white" for="linkInput">Сайт</label>
-                    <f:input property="link" id="linkInput" class="form-control"/>
+                    <f:input property="link"
+                             id="linkInput"
+                             class="form-control"
+                             title="Укажите корректную ссылку"
+                             pattern="^(https?)://.+[.].+"/>
                     <g:hasErrors>
                         <ul>
                             <g:eachError var="err" field="link">
